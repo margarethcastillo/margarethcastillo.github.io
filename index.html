@@ -65,11 +65,9 @@ body {
   z-index: 2;
   max-width: 1200px;
   margin: auto;
-
   display: flex;
   align-items: center;
   gap: 25px;
-
   background: #fff;
   padding: 30px 40px;
   border-radius: 25px;
@@ -103,7 +101,6 @@ body {
   z-index: 2;
   max-width: 1200px;
   margin: 40px auto;
-
   background: #fff;
   border-radius: 30px;
   padding: 50px;
@@ -167,6 +164,39 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
+/* SECTION (NEW) */
+.section {
+  background: #f9f8f6;
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  color: #5a4a1f;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #d4af37;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #b8962e;
+}
+
 /* MODAL */
 .modal {
   position: fixed;
@@ -226,6 +256,7 @@ body {
       <div class="menu-item active" onclick="showContent('experience', this)">experience</div>
       <div class="menu-item" onclick="showContent('skills', this)">skills</div>
       <div class="menu-item" onclick="showContent('projects', this)">projects</div>
+      <div class="menu-item" onclick="showContent('activity', this)">activity</div>
       <div class="menu-item" onclick="showContent('contact', this)">contact</div>
     </div>
 
@@ -259,7 +290,7 @@ function showContent(section, el) {
   if (section === "experience") {
     html = `
       <div class="card">👩🏻‍💼 IT Student – Studying Web Development</div>
-      <div class="card">💻  Completed 2 system projects with front-end and back-end</div>
+      <div class="card">💻 Completed 2 system projects with front-end and back-end</div>
     `;
   } 
   else if (section === "skills") {
@@ -275,6 +306,16 @@ function showContent(section, el) {
       <div class="card" onclick="openModal('Wildlife ConSight PH','A wildlife awareness website project.')">Wildlife ConSight PH</div>
     `;
   } 
+  else if (section === "activity") {
+    html = `
+      <div class="section">
+        <h2>Activity</h2>
+        <a href="A02/index.html" class="btn">
+          View Assignment A02
+        </a>
+      </div>
+    `;
+  }
   else if (section === "contact") {
     html = `
       <div class="card">📧 margarethcastillo938@gmail.com</div>
@@ -282,8 +323,7 @@ function showContent(section, el) {
     `;
   }
 
-  /* ✅ FIXED LINE */
-  content.innerHTML = `<div class="fade">${html}</div>`;
+  content.innerHTML = html;
 }
 
 /* MODAL */
@@ -305,3 +345,5 @@ window.onload = function() {
 
 </body>
 </html>
+
+
