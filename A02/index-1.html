@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gaming Mouse</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #b6b3b3b7;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background-color: #2f2f2f;
+    }
+
+    .navbar-brand {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .header {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url('header_pic.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  padding: 150px 0;
+  border-radius: 0 0 40px 40px;
+}
+
+
+    .btn-custom {
+      background-color: #5a5a5a;
+      color: white;
+      border-radius: 25px;
+      padding: 10px 25px;
+    }
+
+    .btn-custom:hover {
+      background-color: #3f3f3f;
+    }
+
+    .feature-box {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .gallery img {
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #2f2f2f;
+    }
+  </style>
+</head>
+
+<body>
+
+
+<!-- Nav -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+
+    <!-- LOGO -->
+    <a class="navbar-brand" href="#">Gmouse</a>
+
+    <!-- TOGGLE BUTTON -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- NAV LINKS -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#features">Features</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery">Gallery</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- header -->
+<section id="home" class="header text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Premium Gaming Mouse</h1>
+    <p class="lead">Smooth control. Clean design. Built for performance.</p>
+    <a href="#features" class="btn btn-custom mt-3">Explore</a>
+  </div>
+</section>
+
+<!-- about -->
+<section>
+  <div class="container text-center">
+    <h2>About</h2>
+    <p class="mt-3">
+      This gaming mouse offers precision, speed, and comfort. It is designed for gamers, students, and everyday users who want smooth performance and a modern setup.
+    </p>
+  </div>
+</section>
+
+<!-- features -->
+<section id="features">
+  <div class="container">
+    <h2 class="text-center mb-5">Features</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="feature-box text-center">
+          <h5><strong>🎯 High DPI</strong></h5>
+          <p>Accurate and fast tracking for smooth movement.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box text-center">
+          <h5><strong>⚡ Fast Click</strong></h5>
+          <p>Low delay for better performance.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box text-center">
+          <h5><strong>✨ RGB Light</strong></h5>
+          <p>Clean and modern lighting design.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box text-center">
+          <h5><strong>🖐️ Comfortable</strong></h5>
+          <p>Ergonomic shape for long use.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box text-center">
+          <h5><strong>🔋 Long Battery</strong></h5>
+          <p>Lasts all day without charging.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box text-center">
+          <h5><strong>🔌 Flexible</strong></h5>
+          <p>Supports wired and wireless use.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- gallery-->
+<section id="gallery" class="background-color ">
+  <div class="container">
+    <h2 class="text-center mb-5"><strong>Gallery</strong></h2>
+
+    <div class="row g-4 gallery">
+      <div class="col-md-4">
+        <img src="red.png" class="img-fluid">
+      </div>
+
+      <div class="col-md-4">
+        <img src="purple.png" class="img-fluid">
+      </div>
+
+      <div class="col-md-4">
+        <img src="blue.jpg" class="img-fluid">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="text-white text-center p-3">
+  <p>© 2026 GMouse Showcase</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
