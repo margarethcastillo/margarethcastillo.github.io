@@ -16,6 +16,55 @@
     nav a {
       transition: background-color 0.2s ease;
     }
+
+    img {
+     max-width: 100%;
+   }
+ 
+   /* sidebar: fixed 340px column on desktop (same as before) */
+   .sidebar {
+     width: 340px;
+     min-height: 100vh;
+   }
+ 
+   .sidebar li {
+     word-break: break-word;
+   }
+ 
+   /* tablet & phone: sidebar becomes a top section */
+   @media (max-width: 991.98px) {
+     .sidebar {
+       width: 100%;
+       min-height: 0;
+       border-right: 0 !important;
+       border-bottom: 1px solid #dee2e6;
+     }
+ 
+     .sidebar nav {
+       flex-direction: row !important;
+       flex-wrap: wrap;
+     }
+ 
+     .sidebar nav a {
+       flex: 1 1 calc(50% - 4px);
+     }
+   }
+ 
+   /* phone */
+   @media (max-width: 575.98px) {
+     .sidebar {
+       padding: 1.25rem !important;
+     }
+ 
+     #skillsModal .modal-dialog {
+       width: auto !important;
+     }
+ 
+     .skill-box {
+       width: 100% !important;
+     }
+   }
+
   </style>
 </head>
 
