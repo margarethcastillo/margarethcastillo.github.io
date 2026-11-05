@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>My Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -16,6 +16,7 @@
     nav a {
       transition: background-color 0.2s ease;
     }
+
 
     img {
       max-width: 100%;
@@ -38,13 +39,40 @@
         border-bottom: 1px solid #dee2e6;
       }
 
+      body {
+        padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+      }
+
       .sidebar nav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1030;
         flex-direction: row !important;
-        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 0 !important;
+        background-color: #fff;
+        border-top: 1px solid #dee2e6;
+        padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
       }
 
       .sidebar nav a {
-        flex: 1 1 calc(50% - 4px);
+        flex: 1 1 0;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2px !important;
+        padding: 4px 2px !important;
+        text-align: center;
+      }
+
+      .sidebar nav a img {
+        width: 34px;
+        height: 34px;
+      }
+
+      .sidebar nav a span {
+        font-size: 0.7rem;
       }
     }
 
@@ -82,11 +110,11 @@
       </div>
 
       <!-- contact info -->
-            <ul class="list-unstyled small text-secondary mb-4">
-                <li class="mb-2"><i class="bi bi-envelope me-2"></i> 🖂 margarethcastillo938@gmail.com</li>
-                <li class="mb-2"><i class="bi bi-person me-2"></i> ⓕ Margareth Castillo</li>
-                <li><i class="bi bi-telephone me-2"></i> ✆ 09062000589</li>
-            </ul>
+      <ul class="list-unstyled small text-secondary mb-4">
+        <li class="mb-2"><i class="bi bi-envelope me-2"></i> 🖂 margarethcastillo938@gmail.com</li>
+        <li class="mb-2"><i class="bi bi-person me-2"></i> ⓕ Margareth Castillo</li>
+        <li><i class="bi bi-telephone me-2"></i> ✆ 09062000589</li>
+      </ul>
 
 
       <!-- nav -->
@@ -96,21 +124,21 @@
           <img src="F.png" width="58" height="58" style="object-fit:cover;">
           <span class="small fw-medium">About me</span>
         </a>
-        
+
         <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-secondary rounded-3 px-3 py-2"
           data-bs-toggle="modal" data-bs-target="#educationModal">
           <img src="E.png" width="58" height="58" style="object-fit:cover;">
           <span class="small fw-medium">Education</span>
         </a>
-        
+
         <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-secondary rounded-3 px-3 py-2"
-           data-bs-toggle="modal" data-bs-target="#projectsModal">
+          data-bs-toggle="modal" data-bs-target="#projectsModal">
           <img src="P.png" width="58" height="58" style="object-fit:cover;">
           <span class="small fw-medium">Projects</span>
         </a>
-        
+
         <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-secondary rounded-3 px-3 py-2"
-           data-bs-toggle="modal" data-bs-target="#skillsModal">
+          data-bs-toggle="modal" data-bs-target="#skillsModal">
           <img src="S.png" width="58" height="58" style="object-fit:cover;">
           <span class="small fw-medium">Skills</span>
         </a>
@@ -128,73 +156,73 @@
       <div class="row g-3">
         <!-- row1 -->
         <div class="col-6 col-md-4">
-          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;"
-            " data-bs-toggle="modal" data-bs-target="#illust1Modal">
+          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle=" modal"
+            data-bs-target="#illust1Modal">
             <img src="I1.png" class="w-100 h-100 rounded-2" style="object-fit:cover;">
           </div>
-          
+
         </div>
         <div class="col-6 col-md-4">
-          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle="modal"
+          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle=" modal"
             data-bs-target="#illust2Modal">
             <img src="I2.png" class="w-100 h-100 rounded-2" style="object-fit:cover;">
           </div>
-          
+
         </div>
         <div class="col-6 col-md-4">
-          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle="modal"
+          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle=" modal"
             data-bs-target="#illust3Modal">
             <img src="I3.png" class="w-100 h-100 rounded-2" style="object-fit:cover;">
           </div>
-          
+
         </div>
         <!-- row2 -->
         <div class="col-6 col-md-4">
-          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle="modal"
+          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle=" modal"
             data-bs-target="#illust4Modal">
             <img src="" class="w-100 h-100 rounded-2" style="object-fit:cover;">
           </div>
-        
+
         </div>
         <div class="col-6 col-md-4">
-          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle="modal"
+          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle=" modal"
             data-bs-target="#illust5Modal">
             <img src="" class="w-100 h-100 rounded-2" style="object-fit:cover;">
           </div>
-          
+
         </div>
         <div class="col-6 col-md-4">
-          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle="modal"
+          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle=" modal"
             data-bs-target="#illust6Modal">
             <img src="" class="w-100 h-100 rounded-2" style="object-fit:cover;">
           </div>
-          
+
         </div>
         <!-- row3 -->
         <div class="col-6 col-md-4">
-          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle="modal"
+          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle=" modal"
             data-bs-target="#illust7Modal">
             <img src="" class="w-100 h-100 rounded-2" style="object-fit:cover;">
           </div>
-          
+
         </div>
         <div class="col-6 col-md-4">
-          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle="modal"
+          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle=" modal"
             data-bs-target="#illust8Modal">
             <img src="" class="w-100 h-100 rounded-2" style="object-fit:cover;">
           </div>
-          
+
         </div>
         <div class="col-6 col-md-4">
-          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle="modal"
+          <div class="bg-secondary bg-opacity-25 rounded-2" style="height:220px;" " data-bs-toggle=" modal"
             data-bs-target="#illust9Modal">
             <img src="" class="w-100 h-100 rounded-2" style="object-fit:cover;">
           </div>
         </div>
       </div>
-        
+
     </main>
-       </div>
+  </div>
 
   <!-- Illust1 modal -->
   <div class="modal fade" id="illust1Modal" tabindex="-1" aria-hidden="true">
@@ -433,11 +461,11 @@
     </div>
   </div>
 
-  
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
